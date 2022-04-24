@@ -5,7 +5,7 @@ With this program you will be able to find out the status of the stores incident
 ### Pre-requisites
 Ruby: 2.7.5
 ### Installing
-After cloning this repository, please install the gems and dependences required by running on the terminal:
+After cloning this repository, please install the necessary gems and dependences by running on the terminal:
 ```bash
 bundle install
 ```
