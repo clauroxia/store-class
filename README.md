@@ -11,10 +11,10 @@ bundle install
 ```
 
 ## Main program
-The Store class contains many methods, one of them is incident_status which receives two dates as arguments and returns a collection with the required information. It was located on the store.rb file.
+The Store class contains many methods, one of them is incident_status which receives two dates as arguments (entered by the user) and returns a collection with the required information. It was located on the store.rb file.
 
 The incidents.rb file contains an array of hashes with the reported incidents. Each incident has three mandatory keys: description, status and date_incident. And only when the status is "solved", there is one more key: date_solution.
-Just as an example, the array has four incidents this time.
+Just as an example, the array has four incidents this time, so it can be changed by the user.
 The program is executed by running:
 ```bash
 ruby store.rb
