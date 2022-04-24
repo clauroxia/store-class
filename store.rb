@@ -16,8 +16,8 @@ class Store
     if date1 < date2
       incidents_report[:open_cases] = cases_incidents("open", date1, date2)
       incidents_report[:closed_cases] = cases_incidents("solved", date1, date2)
-      incidents_report[:average_solution] = average_time
-      incidents_report[:maximum_solution] = maximum_time
+      incidents_report[:average_solution] = average_time.nil? ? 0 : average_time
+      incidents_report[:maximum_solution] = maximum_time.nil? ? 0 : maximum_time
       print_incidents(incidents_report)
     else
       puts "The first date (#{date1}), must be less than the second one (#{date2})"
@@ -59,7 +59,7 @@ class Store
   end
 
   def average_time
-    @solution_time.sum / @solution_time.size
+    @solution_time.sum / @solution_time.size unless @solution_time.nil?
   end
 
   def maximum_time
@@ -67,9 +67,9 @@ class Store
       range_time(open_incident)
     end
     @time_incidents.sort!
-    @time_incidents[-1]
+    @time_incidents[-1] unless @time_incidents.nil?
   end
 end
 
 some_store = Store.new(INCIDENTS)
-some_store.incident_status("2022-03-20", "2022-04-30")
+some_store.incident_status("2022-03-01", "2022-03-30")
