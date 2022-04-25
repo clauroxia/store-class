@@ -1,5 +1,5 @@
 # Store Class
-With this program you will be able to find out the status of the stores incidents between two given dates.
+With this program you will be able to find out the status of the store incidents between two given dates.
 
 ## Installation
 ### Pre-requisites
